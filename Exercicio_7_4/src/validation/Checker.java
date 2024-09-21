@@ -10,10 +10,10 @@ public class Checker {
 			return false;
 		}
 		
-		
 		if (authorization.getPsw().equals(psw) && authorization.getNumberIncorrectAttempts() < 3) {
 			return true;
 		}
+		
 		authorization.incorrectAttempts();
 		return false;
 	}
